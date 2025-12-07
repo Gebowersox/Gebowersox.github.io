@@ -1,0 +1,113 @@
+:root {
+    --black: #020202;
+    --tiffany: #93E1D8;
+    --lavender: #FEC9F1;
+    --dimgray: #746F72;
+    --maize: #FFED65;
+    --white: #ffffff;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, var(--tiffany), var(--lavender));
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+    color: var(--black);
+}
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-top: 40px;
+    color: var(--dimgray);
+    font-size: 1.8rem;
+}
+
+
+form {
+    background: var(--white);
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 4px solid var(--lavender);
+}
+
+
+table {
+    width: 100%;
+    margin: 20px 0;
+}
+
+td {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: var(--dimgray);
+}
+
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 2px solid var(--tiffany);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--white);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--maize);
+    transform: scale(1.02);
+}
+
+
+.checkbox-group {
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.checkbox-group label {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    color: var(--black);
+}
+.radio-group {
+    text-align: left;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.radio-group label {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    color: var(--black);
+}
+
+button {
+    background: var(--maize);
+    border: none;
+    padding: 12px 25px;
+    margin: 20px 10px 0;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--lavender);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}

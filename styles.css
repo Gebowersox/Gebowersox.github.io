@@ -7,7 +7,8 @@
 
   --text-dark: #020202;
   --text-light: #ffffff;
-}* {
+}
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

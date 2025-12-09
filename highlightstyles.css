@@ -7,24 +7,71 @@
     --white: #ffffff;
 }
 
-/* Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, var(--lavender), var(--tiffany));
-    padding: 40px;
     margin: 0;
     text-align: center;
+    padding-top: 70px; 
 }
 
-/* Highlight section */
+
+nav {
+  background: var(--black);
+  color: var(--tiffany);
+  padding: 1em 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+nav a {
+  color: var(--tiffany);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .3s ease;
+}
+
+nav a:hover {
+  color: var(--maize);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+.hamburger {
+    font-size: 2rem;
+    color: var(--tiffany);
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}
+
+
 .highlight-container h1 {
     font-size: 2.8rem;
-    margin-bottom: 40px;
+    margin-top: 70px;
     color: var(--black);
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Main highlight card */
 .highlight-card {
     max-width: 900px;
     margin: auto;
@@ -38,7 +85,6 @@ body {
     align-items: center;
 }
 
-/* Drink image */
 .highlight-card img {
     width: 300px;
     border-radius: 20px;
@@ -46,7 +92,6 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Info section */
 .highlight-info {
     text-align: left;
 }
@@ -64,7 +109,6 @@ body {
     line-height: 1.5;
 }
 
-/* Button */
 button {
     background: var(--maize);
     padding: 12px 25px;
@@ -80,4 +124,25 @@ button:hover {
     background: var(--lavender);
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--black);
+    width: 100%;
+    padding: 1rem 0;
+    top: 60px;
+    left: 0;
+    position: absolute;
+  }
+
+  .menu-toggle:checked + .hamburger + nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
 }
